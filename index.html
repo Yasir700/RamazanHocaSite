@@ -218,6 +218,51 @@
         nav a.active::after {
             width: 100%;
         }
+
+        /* Theme Toggle Button Styles */
+        .theme-toggle {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(94, 114, 228, 0.3);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 6px 15px rgba(94, 114, 228, 0.5);
+        }
+
+        .theme-toggle i {
+            color: white;
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .dark .theme-toggle {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        }
+
+        .dark .theme-toggle:hover {
+            box-shadow: 0 6px 15px rgba(251, 191, 36, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .theme-toggle {
+                width: 36px;
+                height: 36px;
+            }
+            .theme-toggle i {
+                font-size: 16px;
+            }
+        }
     </style>
 
     <!-- Navbar -->
@@ -241,11 +286,19 @@
                     <a href="#contact" class="text-gray-700 dark:text-gray-700 hover:text-indigo-500 font-medium">
                         <i class="fas fa-envelope mr-1"></i> İletişim
                     </a>
+                    <button id="darkModeToggle" class="theme-toggle" title="Tema Değiştir">
+                        <i class="fas fa-moon" id="darkModeIcon"></i>
+                    </button>
                 </div>
-                <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="md:hidden text-gray-700 dark:text-gray-700">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
+                <!-- Mobile Menu Button & Theme Toggle -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <button id="darkModeToggleMobile" class="theme-toggle" title="Tema Değiştir">
+                        <i class="fas fa-moon" id="darkModeIconMobile"></i>
+                    </button>
+                    <button id="mobileMenuBtn" class="text-gray-700 dark:text-gray-700">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 space-y-3">
@@ -269,11 +322,6 @@
     <div class="container mx-auto px-4 md:px-6 py-8 md:py-12 max-w-6xl overflow-x-hidden mt-20">
         <!-- Header Section -->
         <header class="flex flex-col md:flex-row items-center justify-between mb-8 md:mb-16 relative">
-            <button id="darkModeToggle"
-                class="fixed top-20 right-4 z-50 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-yellow-300 shadow-md hover:shadow-lg transition-all transform transition-transform duration-300"
-                style="width: 36px; height: 36px;">
-                <i class="fas fa-moon text-sm" id="darkModeIcon"></i>
-            </button>
             <div class="md:w-1/2 mb-8 md:mb-0">
                 <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 gradient-text">Uzman Klinik Psikolog</h1>
                 <h2 class="text-lg sm:text-xl md:text-2xl font-medium text-gray-600 mb-6 typewriter">Ruh Sağlığında
@@ -677,21 +725,6 @@
             move();
         }
 
-        // Hide/show dark mode button on scroll
-        let lastScrollTop = 0;
-        const darkModeBtn = document.getElementById('darkModeToggle');
-        window.addEventListener('scroll', function () {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop) {
-                // Scrolling down
-                darkModeBtn.style.transform = 'translateY(-50px)';
-            } else {
-                // Scrolling up
-                darkModeBtn.style.transform = 'translateY(0)';
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        });
-
         // Add animation to timeline items when they come into view
         const timelineItems = document.querySelectorAll('.timeline-item');
 
@@ -751,26 +784,45 @@
 
         // Dark Mode Toggle
         const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeToggleMobile = document.getElementById('darkModeToggleMobile');
         const darkModeIcon = document.getElementById('darkModeIcon');
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        const darkModeIconMobile = document.getElementById('darkModeIconMobile');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark');
+
+        // Function to update both icons
+        function updateIcons(isDark) {
+            const iconClass = isDark ? 'fa-sun' : 'fa-moon';
+            const oldClass = isDark ? 'fa-moon' : 'fa-sun';
+            
+            if (darkModeIcon) {
+                darkModeIcon.classList.replace(oldClass, iconClass);
+            }
+            if (darkModeIconMobile) {
+                darkModeIconMobile.classList.replace(oldClass, iconClass);
+            }
+        }
 
         // Check local storage - default to light mode
         if (localStorage.getItem('darkMode') === 'true') {
             document.body.classList.add('dark');
-            darkModeIcon.classList.replace('fa-moon', 'fa-sun');
+            updateIcons(true);
         }
 
-        darkModeToggle.addEventListener('click', () => {
+        // Function to toggle dark mode
+        function toggleDarkMode() {
             document.body.classList.toggle('dark');
             const isDark = document.body.classList.contains('dark');
             localStorage.setItem('darkMode', isDark);
+            updateIcons(isDark);
+        }
 
-            if (isDark) {
-                darkModeIcon.classList.replace('fa-moon', 'fa-sun');
-            } else {
-                darkModeIcon.classList.replace('fa-sun', 'fa-moon');
-            }
-        });
+        // Add event listeners to both buttons
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', toggleDarkMode);
+        }
+        if (darkModeToggleMobile) {
+            darkModeToggleMobile.addEventListener('click', toggleDarkMode);
+        }
     </script>
 </body>
 
