@@ -509,7 +509,7 @@
             });
         });
 
-        // Form Submission - Redirect to confirmation page
+        // Form Submission - Send to WhatsApp
         const form = document.getElementById('appointmentForm');
         
         form.addEventListener('submit', function(event) {
@@ -520,12 +520,66 @@
             
             // Show loading state
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Gönderiliyor...';
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> WhatsApp\'a Yönlendiriliyor...';
             
-            // Simulate sending (wait 1 second for better UX)
+            // Get form data
+            const fullName = document.getElementById('fullName').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const age = document.getElementById('age').value.trim();
+            const serviceType = document.getElementById('serviceType').value;
+            const preferredDate = document.getElementById('preferredDate').value;
+            const preferredTime = document.getElementById('preferredTime').value;
+            const sessionType = document.getElementById('sessionType').value;
+            const message = document.getElementById('message').value.trim();
+
+            // Service type names in Turkish
+            const serviceNames = {
+                'bireysel': 'Bireysel Terapi',
+                'cift': 'Çift Terapisi',
+                'cocuk': 'Çocuk-Ergen Terapisi',
+                'online': 'Online Danışmanlık'
+            };
+
+            const sessionNames = {
+                'yuz-yuze': 'Yüz Yüze',
+                'online': 'Online (Video Konferans)'
+            };
+
+            // Create WhatsApp message
+            let whatsappMessage = `*🗓️ YENİ RANDEVU TALEBİ*\n\n`;
+            whatsappMessage += `*👤 Kişisel Bilgiler:*\n`;
+            whatsappMessage += `Ad Soyad: ${fullName}\n`;
+            whatsappMessage += `Telefon: ${phone}\n`;
+            if (email) whatsappMessage += `E-posta: ${email}\n`;
+            if (age) whatsappMessage += `Yaş: ${age}\n`;
+            
+            whatsappMessage += `\n*📋 Randevu Detayları:*\n`;
+            whatsappMessage += `Hizmet Türü: ${serviceNames[serviceType]}\n`;
+            whatsappMessage += `Görüşme Şekli: ${sessionNames[sessionType]}\n`;
+            if (preferredDate) whatsappMessage += `Tercih Edilen Tarih: ${preferredDate}\n`;
+            if (preferredTime) whatsappMessage += `Tercih Edilen Saat: ${preferredTime}\n`;
+            
+            if (message) {
+                whatsappMessage += `\n*💬 Ek Notlar:*\n${message}`;
+            }
+
+            // WhatsApp number (with country code, no + or spaces)
+            const whatsappNumber = '905062574572';
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Create WhatsApp URL
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            
+            // Redirect to WhatsApp after 1 second
             setTimeout(function() {
-                // Redirect to confirmation page
-                window.location.href = 'randevu-onay.html';
+                window.open(whatsappURL, '_blank');
+                // Also redirect to confirmation page
+                setTimeout(function() {
+                    window.location.href = 'randevu-onay.html';
+                }, 500);
             }, 1000);
         });
 

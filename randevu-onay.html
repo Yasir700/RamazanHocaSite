@@ -59,6 +59,13 @@
             --card-bg: #16213e;
         }
 
+        .dark .text-gray-600,
+        .dark .text-gray-700,
+        .dark .text-gray-800,
+        .dark .text-gray-900 {
+            color: #d1d5db;
+        }
+
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
@@ -76,6 +83,13 @@
 
         .gradient-text {
             background: linear-gradient(90deg, #5e72e4, #825ee4, #a84ee4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .dark .gradient-text {
+            background: linear-gradient(90deg, #b8c1ec, #a5b4fc, #818cf8);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
