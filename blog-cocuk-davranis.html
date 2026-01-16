@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Çocuklarda Davranış Problemleri: Nedenleri, Belirtileri ve Çözüm Yolları">
+    <title>Çocuklarda Davranış Problemleri | Psikolog Ramazan Arslan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/icon.png">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17847392972"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17847392972');
+    </script>
+    <!-- Event snippet for Tıkla ve ara conversion page -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17847392972/djqcCKaY3OYbEMy1pr5C',
+                'value': 1.0,
+                'currency': 'TRY',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+</head>
+
+<body class="min-h-screen">
+    <div id="particles-container"></div>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+        body {
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+            --card-bg: white;
+            transition: background-color 0.3s, color 0.3s;
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .dark {
+            --bg-color: #1a1a2e;
+            --text-color: #f0f0f0;
+            --card-bg: #16213e;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .glow-card {
+            background-color: var(--card-bg);
+            box-shadow: 0 0 15px rgba(94, 114, 228, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .dark .glow-card {
+            box-shadow: 0 0 15px rgba(20, 30, 70, 0.3);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #5e72e4, #825ee4, #a84ee4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .therapy-particle {
+            position: absolute;
+            background: rgba(94, 114, 228, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        nav {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .dark nav {
+            background-color: rgba(26, 26, 46, 0.9);
+        }
+
+        nav a {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #5e72e4, #825ee4, #a84ee4);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        .blog-content h2 {
+            color: #2d3748;
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content h3 {
+            color: #4a5568;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-content p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .blog-content ul, .blog-content ol {
+            color: #4a5568;
+            margin-bottom: 1.25rem;
+            padding-left: 2rem;
+        }
+
+        .blog-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        .blog-content strong {
+            color: #2d3748;
+            font-weight: 600;
+        }
+
+        .dark .blog-content h2 {
+            color: #e2e8f0;
+        }
+
+        .dark .blog-content h3 {
+            color: #cbd5e0;
+        }
+
+        .dark .blog-content p,
+        .dark .blog-content li {
+            color: #cbd5e0;
+        }
+
+        .dark .blog-content strong {
+            color: #e2e8f0;
+        }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-40 shadow-md">
+        <div class="container mx-auto px-4 md:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-brain text-indigo-500 text-2xl"></i>
+                    <span class="text-xl font-bold gradient-text">Psikolog Ramazan Arslan</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-500 font-medium">
+                        <i class="fas fa-home mr-1"></i> Ana Sayfa
+                    </a>
+                    <a href="bloglar.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-500 font-medium active">
+                        <i class="fas fa-blog mr-1"></i> Blog
+                    </a>
+                    <a href="randevu.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-500 font-medium">
+                        <i class="fas fa-calendar-check mr-1"></i> Randevu Al
+                    </a>
+                    <a href="index.html#contact" class="text-gray-700 dark:text-gray-300 hover:text-indigo-500 font-medium">
+                        <i class="fas fa-envelope mr-1"></i> İletişim
+                    </a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700 dark:text-gray-300">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 space-y-3">
+                <a href="index.html" class="block text-gray-700 dark:text-gray-300 hover:text-indigo-500 font-medium">
+                    <i class="fas fa-home mr-1"></i> Ana Sayfa
+                </a>
+                <a href="bloglar.html" class="block text-gray-700 dark:text-gray-300 hover:text-indigo-500 font-medium active">
+                    <i class="fas fa-blog mr-1"></i> Blog
+                </a>
+                <a href="randevu.html" class="block text-gray-700 dark:text-gray-300 hover:text-indigo-500 font-medium">
+                    <i class="fas fa-calendar-check mr-1"></i> Randevu Al
+                </a>
+                <a href="index.html#contact" class="block text-gray-700 dark:text-gray-300 hover:text-indigo-500 font-medium">
+                    <i class="fas fa-envelope mr-1"></i> İletişim
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <button id="darkModeToggle"
+        class="fixed top-20 right-4 z-50 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-yellow-300 shadow-md hover:shadow-lg transition-all"
+        style="width: 36px; height: 36px;">
+        <i class="fas fa-moon text-sm" id="darkModeIcon"></i>
+    </button>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 md:px-6 py-8 md:py-12 max-w-4xl mt-20">
+        <!-- Breadcrumb -->
+        <div class="mb-6">
+            <nav class="text-sm">
+                <a href="index.html" class="text-indigo-500 hover:text-indigo-600">Ana Sayfa</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <a href="bloglar.html" class="text-indigo-500 hover:text-indigo-600">Blog</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <span class="text-gray-600 dark:text-gray-400">Çocuklarda Davranış Problemleri</span>
+            </nav>
+        </div>
+
+        <!-- Blog Header -->
+        <article class="glow-card rounded-2xl p-8 md:p-12">
+            <div class="mb-8">
+                <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+                    <i class="fas fa-calendar-alt mr-2"></i>
+                    <span>10 Ocak 2026</span>
+                    <span class="mx-3">•</span>
+                    <i class="fas fa-clock mr-2"></i>
+                    <span>7 dakika okuma</span>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                    Çocuklarda Davranış Problemleri: Nedenleri ve Çözüm Yolları
+                </h1>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 rounded-full text-sm">Çocuk Psikolojisi</span>
+                    <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 rounded-full text-sm">Davranış Problemleri</span>
+                    <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-300 rounded-full text-sm">Ebeveynlik</span>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mb-8 rounded-xl overflow-hidden">
+                <img src="assets/images/paylaşım 5.jpg" alt="Çocuk Davranış Problemleri" class="w-full h-auto">
+            </div>
+
+            <!-- Blog Content -->
+            <div class="blog-content">
+                <p class="text-lg font-medium text-gray-700 dark:text-gray-300 mb-6">
+                    Çocuklarda davranış problemleri, ebeveynlerin en çok karşılaştığı zorluklardan biridir. Bu yazıda, davranış problemlerinin nedenlerini, türlerini ve etkili çözüm yollarını detaylı olarak inceleyeceğiz.
+                </p>
+
+                <h2>Davranış Problemi Nedir?</h2>
+                <p>
+                    Davranış problemleri, çocuğun yaşına ve gelişim düzeyine uygun olmayan, toplumsal normlara aykırı ve çevreye zarar veren davranışlar olarak tanımlanabilir. Bu davranışlar, çocuğun kendisine, ailesine ve sosyal çevresine olumsuz etki yapar.
+                </p>
+
+                <h2>Yaygın Davranış Problemleri</h2>
+
+                <h3>1. Saldırgan Davranışlar</h3>
+                <ul>
+                    <li>Fiziksel saldırganlık (vurma, ısırma, çimdikleme)</li>
+                    <li>Sözel saldırganlık (bağırma, hakaret etme, küfür)</li>
+                    <li>Eşyalara zarar verme</li>
+                    <li>Kardeş kıskançlığı ve kavgalar</li>
+                </ul>
+
+                <h3>2. İsyankar ve Karşı Gelen Davranışlar</h3>
+                <ul>
+                    <li>Kuralları sürekli ihlal etme</li>
+                    <li>Ebeveyn talimatlarına uymama</li>
+                    <li>Sürekli "hayır" deme, inat yapma</li>
+                    <li>Otorite figürlerine meydan okuma</li>
+                </ul>
+
+                <h3>3. Dikkat Çekme Davranışları</h3>
+                <ul>
+                    <li>Aşırı hırçınlık ve huzursuzluk</li>
+                    <li>Sürekli konuşma, kesme</li>
+                    <li>Yaramazlık yapma</li>
+                    <li>Aşırı şımarıklık</li>
+                </ul>
+
+                <h3>4. Yeme ve Uyku Problemleri</h3>
+                <ul>
+                    <li>İştahsızlık veya aşırı yeme</li>
+                    <li>Seçici yeme davranışı</li>
+                    <li>Uyku rutinini reddetme</li>
+                    <li>Gece korkuları, kabus görme</li>
+                </ul>
+
+                <h3>5. Dikkat Eksikliği ve Hiperaktivite</h3>
+                <ul>
+                    <li>Sürekli hareket halinde olma</li>
+                    <li>Bir işe odaklanamama</li>
+                    <li>Dürtüsel davranma</li>
+                    <li>Unutkanlık, dağınıklık</li>
+                </ul>
+
+                <h2>Davranış Problemlerinin Nedenleri</h2>
+
+                <h3>Gelişimsel Faktörler</h3>
+                <p>
+                    Çocukların gelişim dönemlerine göre bazı davranışlar normaldir. Örneğin, 2-3 yaş "hayır" dönemi, ergenlikte isyan davranışları doğal süreçlerdir.
+                </p>
+
+                <h3>Çevresel Faktörler</h3>
+                <ul>
+                    <li><strong>Aile içi çatışmalar:</strong> Ebeveynler arası anlaşmazlıklar</li>
+                    <li><strong>Tutarsız disiplin:</strong> Farklı kurallar, ceza ve ödül sistemlerindeki tutarsızlık</li>
+                    <li><strong>İhmal veya istismar:</strong> Duygusal veya fiziksel ihmal</li>
+                    <li><strong>Aşırı koruyucu veya otoriter ebeveynlik:</strong> Dengesiz ebeveyn tutumları</li>
+                    <li><strong>Model alma:</strong> Çocuklar gördükleri davranışları taklit ederler</li>
+                </ul>
+
+                <h3>Psikolojik Faktörler</h3>
+                <ul>
+                    <li>Anksiyete ve korku</li>
+                    <li>Düşük benlik saygısı</li>
+                    <li>Depresyon</li>
+                    <li>Travmatik yaşantılar</li>
+                    <li>Duygu düzenleme güçlüğü</li>
+                </ul>
+
+                <h3>Biyolojik Faktörler</h3>
+                <ul>
+                    <li>Genetik yatkınlık</li>
+                    <li>Nörolojik farklılıklar (DEHB, otizm spektrum bozukluğu)</li>
+                    <li>Beyin kimyası dengesizlikleri</li>
+                    <li>Hamilelik ve doğum komplikasyonları</li>
+                </ul>
+
+                <h2>Ebeveynler Ne Yapabilir?</h2>
+
+                <h3>1. Olumlu Disiplin Teknikleri</h3>
+                <ul>
+                    <li><strong>Net ve tutarlı kurallar koyun:</strong> Kurallar açık, anlaşılır ve her zaman aynı olmalı</li>
+                    <li><strong>Olumlu davranışları ödüllendirin:</strong> Övgü, ilgi, ödül sistemi</li>
+                    <li><strong>Sonuç odaklı yaklaşım:</strong> Davranışların doğal sonuçlarını yaşatın</li>
+                    <li><strong>Zaman aşımı (time-out):</strong> Sakinleşme için kısa süreli ayrılma</li>
+                </ul>
+
+                <h3>2. Duygusal Bağ Güçlendirme</h3>
+                <ul>
+                    <li>Kaliteli zaman geçirin</li>
+                    <li>Aktif dinleme yapın</li>
+                    <li>Duygularını kabul edin ve onaylayın</li>
+                    <li>Sevgi ve şefkatinizi gösterin</li>
+                </ul>
+
+                <h3>3. Açık İletişim</h3>
+                <ul>
+                    <li>Çocuğunuzla yaşına uygun konuşun</li>
+                    <li>Beklentilerinizi açıkça ifade edin</li>
+                    <li>Seçenekler sunun</li>
+                    <li>Sorular sorun, fikirlerini öğrenin</li>
+                </ul>
+
+                <h3>4. Model Olma</h3>
+                <ul>
+                    <li>Görmek istediğiniz davranışları sergileyin</li>
+                    <li>Duygularınızı sağlıklı şekilde ifade edin</li>
+                    <li>Sakin ve kontrolü kalma yöntemlerini gösterin</li>
+                    <li>Sorun çözme becerilerinizi paylaşın</li>
+                </ul>
+
+                <h3>5. Rutin ve Yapı Oluşturma</h3>
+                <ul>
+                    <li>Düzenli uyku ve yemek saatleri</li>
+                    <li>Öngörülebilir günlük program</li>
+                    <li>Görev ve sorumluluklar</li>
+                    <li>Aile gelenekleri ve ritüeller</li>
+                </ul>
+
+                <h2>Profesyonel Yardım Ne Zaman Gerekir?</h2>
+                <p>
+                    Aşağıdaki durumlarda mutlaka bir çocuk psikoloğuna danışmalısınız:
+                </p>
+
+                <ul>
+                    <li>Davranış problemleri 6 aydan uzun süredir devam ediyorsa</li>
+                    <li>Çocuğun okul performansı ciddi şekilde düşüyorsa</li>
+                    <li>Kendine veya başkalarına zarar verme riski varsa</li>
+                    <li>Sosyal ilişkileri ciddi şekilde bozuluyorsa</li>
+                    <li>Ebeveyn müdahaleleri işe yaramıyorsa</li>
+                    <li>Ani ve açıklanamayan davranış değişiklikleri görülüyorsa</li>
+                    <li>Depresyon, kaygı gibi ek belirtiler varsa</li>
+                </ul>
+
+                <h2>Terapide Kullanılan Yöntemler</h2>
+
+                <h3>1. Oyun Terapisi</h3>
+                <p>
+                    Çocuklar oyun aracılığıyla duygularını ifade eder ve sorunlarını çözer. Oyun terapisti, oyun sürecinde çocuğa rehberlik eder.
+                </p>
+
+                <h3>2. Bilişsel Davranışçı Terapi (BDT)</h3>
+                <p>
+                    Olumsuz düşünce ve davranış kalıplarını değiştirmeyi hedefler. Özellikle okul çağı çocuklarında etkilidir.
+                </p>
+
+                <h3>3. Ebeveyn Eğitim Programları</h3>
+                <p>
+                    Ebeveynlere etkili disiplin teknikleri, iletişim becerileri ve problem çözme yöntemleri öğretilir.
+                </p>
+
+                <h3>4. Aile Terapisi</h3>
+                <p>
+                    Aile dinamiklerini iyileştirmeye odaklanır. Tüm aile üyeleri sürece dahil edilir.
+                </p>
+
+                <h3>5. Sosyal Beceri Eğitimi</h3>
+                <p>
+                    Çocuğa akran ilişkileri, duygu düzenleme, problem çözme gibi sosyal beceriler kazandırılır.
+                </p>
+
+                <h2>Önemli Hatırlatmalar</h2>
+
+                <div class="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-4 mb-6">
+                    <ul class="space-y-2">
+                        <li><strong>Sabırlı olun:</strong> Davranış değişimi zaman alır</li>
+                        <li><strong>Tutarlı olun:</strong> Kurallar ve sonuçlar her zaman aynı olmalı</li>
+                        <li><strong>Kendinize bakın:</strong> Ebeveyn olarak kendi ruh sağlığınız da önemli</li>
+                        <li><strong>Mükemmel ebeveyn olmaya çalışmayın:</strong> Hata yapmak normaldir</li>
+                        <li><strong>Destek alın:</strong> Aile, arkadaş veya profesyonel destek aramaktan çekinmeyin</li>
+                    </ul>
+                </div>
+
+                <h2>Sonuç</h2>
+                <p>
+                    Çocuklarda davranış problemleri yaygın ve genellikle tedavi edilebilir durumlardır. Erken müdahale, sorunların büyümesini önler ve çocuğun sağlıklı gelişimini destekler. Unutmayın, her çocuk benzersizdir ve kendine özgü bir yaklaşım gerektirir.
+                </p>
+            </div>
+        </article>
+
+        <!-- CTA Section -->
+        <div class="glow-card rounded-2xl p-8 md:p-10 text-center bg-gradient-to-r from-indigo-500 to-purple-600 mt-8 mb-8">
+            <i class="fas fa-calendar-check text-4xl text-white mb-4"></i>
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Profesyonel Destek Alın</h3>
+            <p class="text-white/90 mb-6 max-w-2xl mx-auto">
+                Çocuğunuzun davranış problemleri için uzman desteği almak önemlidir. Bugün randevu alın.
+            </p>
+            <a href="randevu.html"
+                class="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-full font-bold hover:bg-gray-100 transition-all shadow-lg">
+                <i class="fas fa-phone mr-2"></i> Hemen Randevu Al
+            </a>
+        </div>
+
+        <!-- Related Posts -->
+        <div class="mb-8">
+            <h3 class="text-2xl font-bold mb-6 gradient-text">İlgili Yazılar</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="blog-dehb.html" class="glow-card rounded-xl p-6 hover:shadow-xl transition-all">
+                    <h4 class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Dikkat Eksikliği ve Hiperaktivite Bozukluğu (DEHB)</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">DEHB'nin belirtileri, tanı süreci ve etkili tedavi yaklaşımları...</p>
+                    <span class="text-indigo-500 text-sm font-medium mt-3 inline-block">
+                        Devamını Oku <i class="fas fa-arrow-right ml-1"></i>
+                    </span>
+                </a>
+                <a href="blog-aile-cift-terapisi.html" class="glow-card rounded-xl p-6 hover:shadow-xl transition-all">
+                    <h4 class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Aile ve Çift Terapisi</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">İlişkilerinizi güçlendirmek için etkili terapi yöntemleri...</p>
+                    <span class="text-indigo-500 text-sm font-medium mt-3 inline-block">
+                        Devamını Oku <i class="fas fa-arrow-right ml-1"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-50 dark:bg-gray-900 py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-500 hover:text-indigo-500 transition-all">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-indigo-500 transition-all">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="https://www.instagram.com/arslan_psikoloji?igsh=MWFveDE5Njc1aHpobg=="
+                    class="text-gray-500 hover:text-indigo-500 transition-all">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-indigo-500 transition-all">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                © 2025 Uzman Psikolog Ramazan Arslan. Tüm hakları saklıdır.
+            </p>
+        </div>
+    </footer>
+
+    <button id="backToTop"
+        class="fixed bottom-4 right-4 z-50 p-2 rounded-full bg-indigo-500 text-white shadow-md hover:bg-indigo-600 transition-all opacity-0 invisible"
+        style="width: 36px; height: 36px;">
+        <i class="fas fa-arrow-up text-sm"></i>
+    </button>
+
+    <script>
+        const particlesContainer = document.getElementById('particles-container');
+        const numParticles = 30;
+        for (let i = 0; i < numParticles; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('therapy-particle');
+            const size = Math.random() * 8 + 3;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.top = `${Math.random() * 100}%`;
+            particle.style.opacity = Math.random() * 0.15 + 0.05;
+            particlesContainer.appendChild(particle);
+        }
+
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeIcon = document.getElementById('darkModeIcon');
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark');
+            darkModeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const isDark = document.body.classList.contains('dark');
+            localStorage.setItem('darkMode', isDark);
+            isDark ? darkModeIcon.classList.replace('fa-moon', 'fa-sun') : darkModeIcon.classList.replace('fa-sun', 'fa-moon');
+        });
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>
