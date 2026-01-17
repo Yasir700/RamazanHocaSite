@@ -10,12 +10,13 @@
     <title>Afyon Psikolog Ramazan Arslan | Uzman Klinik Psikolog</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/icon.png">
+    <link rel="icon" type="image/png" href="assets/images/logo-512.png" sizes="512x512">
+    <link rel="apple-touch-icon" href="assets/images/logo-512.png">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17847392972"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'AW-17847392972');
     </script>
@@ -23,7 +24,7 @@
     <script>
         function gtag_report_conversion(url) {
             var callback = function () {
-                if (typeof(url) != 'undefined') {
+                if (typeof (url) != 'undefined') {
                     window.location = url;
                 }
             };
@@ -34,6 +35,16 @@
                 'event_callback': callback
             });
             return false;
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Klinik Psikolog Ramazan Arslan",
+          "alternateName": ["Psikolog Ramazan Arslan"],
+          "url": "https://uzmanramazanarslan.com.tr/"
         }
     </script>
 </head>
@@ -188,6 +199,7 @@
             color: #8b9eff;
             background-color: rgba(22, 33, 62, 0.5);
         }
+
         /* Navbar Styles */
         nav {
             backdrop-filter: blur(10px);
@@ -259,6 +271,7 @@
                 width: 36px;
                 height: 36px;
             }
+
             .theme-toggle i {
                 font-size: 16px;
             }
@@ -274,7 +287,8 @@
                     <span class="text-xl font-bold gradient-text">Psikolog Ramazan Arslan</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="text-gray-700 dark:text-gray-700 hover:text-indigo-500 font-medium active">
+                    <a href="index.html"
+                        class="text-gray-700 dark:text-gray-700 hover:text-indigo-500 font-medium active">
                         <i class="fas fa-home mr-1"></i> Ana Sayfa
                     </a>
                     <a href="bloglar.html" class="text-gray-700 dark:text-gray-700 hover:text-indigo-500 font-medium">
@@ -302,7 +316,8 @@
             </div>
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 space-y-3">
-                <a href="index.html" class="block text-gray-700 dark:text-gray-700 hover:text-indigo-500 font-medium active">
+                <a href="index.html"
+                    class="block text-gray-700 dark:text-gray-700 hover:text-indigo-500 font-medium active">
                     <i class="fas fa-home mr-1"></i> Ana Sayfa
                 </a>
                 <a href="bloglar.html" class="block text-gray-700 dark:text-gray-700 hover:text-indigo-500 font-medium">
@@ -793,7 +808,7 @@
         function updateIcons(isDark) {
             const iconClass = isDark ? 'fa-sun' : 'fa-moon';
             const oldClass = isDark ? 'fa-moon' : 'fa-sun';
-            
+
             if (darkModeIcon) {
                 darkModeIcon.classList.replace(oldClass, iconClass);
             }
